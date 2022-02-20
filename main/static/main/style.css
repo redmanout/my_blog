@@ -4,28 +4,31 @@
     outline: none;
 }
 
-body {background-color: #b1b4ba}
+body {
+    background-color: #b1b4ba
+}
 
 .container-fluid {
     background-color: #b1b4ba;
     min-height: 90vh;
 }
 
-header, footer {background-color: #222324;}
+header, footer {
+    background-color: #222324;
+}
 
 #logo {
     font-weight: bolder;
-    font-size: 2.5rem!important;
+    font-size: 2.5rem !important;
 }
 
 .nav-link {
     font-size: 30px;
-    margin-right: 100px;
+    margin-right: 50px;
 }
 
 .nav-pills {
     display: flex;
-    margin-right: 300px;
 }
 
 .name_reg {
@@ -38,13 +41,19 @@ header, footer {background-color: #222324;}
     margin-right: 10px;
 }
 
-.button-1 {margin-top: 20px}
+.button-1 {
+    margin-top: 20px
+}
 
-#h_1 {font-size: 5rem;}
+#h_1 {
+    font-size: 5rem;
+}
 
-#h_2 {font-size: 3rem;}
+#h_2 {
+    font-size: 3rem;
+}
 
-.block-content{
+.block-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,7 +62,8 @@ header, footer {background-color: #222324;}
     height: 100vh;
     background-color: #b1b4ba;
 }
-.line_1{
+
+.line_1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,11 +72,13 @@ header, footer {background-color: #222324;}
     min-height: 100px;
     margin-bottom: 100px;
 }
+
 .line_1 h2 {
     text-align: center;
     font-size: 80px;
 }
-.line_2{
+
+.line_2 {
     display: flex;
     justify-content: space-around;
     align-content: center;
@@ -79,7 +91,7 @@ header, footer {background-color: #222324;}
     font-size: 60px;
 }
 
-.column{
+.column {
     display: flex;
     flex-direction: column;
     justify-content: center;

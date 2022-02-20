@@ -1,0 +1,12 @@
+{% extends 'main/sample.html' %}
+
+{% block title %}
+    Выход с аккаунта
+{% endblock %}
+
+{% block content %}
+    <div id="reg_block">
+        <h1>Вы вышли с аккаунта</h1>
+        <a href="{% url 'login' %}">Войти в личный кабинет</a>
+    </div>
+{% endblock %}

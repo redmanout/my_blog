@@ -18,3 +18,12 @@
     padding: 30px;
     margin-top: 15px;
 }
+
+.form_login input {
+    display: block;
+    width: 96%;
+    margin-top: 4px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 2%;
+}

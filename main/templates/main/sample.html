@@ -26,13 +26,38 @@
         <li class="nav-item"><a href="#" class="nav-link">Contacts</a></li>
         <li class="nav-item"><a href="#" class="nav-link">About us</a></li>
       </ul>
+
+        {% if not user.is_authenticated %}
+
         <a href="">
             <a href="{% url 'reg' %}">
                 <button class="btn btn-outline-success btn_reg">
                     <span class="name_reg">Регистрация</span>
                 </button>
             </a>
+            <a href="{% url 'login' %}">
+                <button class="btn btn-outline-info btn_reg">
+                    <span class="name_reg">Войти</span>
+                </button>
+            </a>
         </a>
+
+        {% else %}
+
+            <a href="">
+            <a href="{% url 'profile' %}">
+                <button class="btn btn-outline-warning btn_reg">
+                    <span class="name_reg">Профиль</span>
+                </button>
+            </a>
+            <a href="{% url 'logout' %}">
+                <button class="btn btn-outline-danger btn_reg">
+                    <span class="name_reg">Выйти</span>
+                </button>
+            </a>
+        </a>
+
+        {% endif %}
     </header>
     {% if messages %}
         {% for mess in messages %}

@@ -1,0 +1,29 @@
+{% extends 'main/sample.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block block_content %}
+
+    <div class="block-content">
+        <div class="line_1">
+            <h2>{{ h2 }}</h2>
+        </div>
+        <div class="line_2">
+            <div class="column">
+                <h2 class="quality">{{ quickly_block }}</h2>
+                <p>{{ text }}</p>
+            </div>
+            <div class="column">
+                <h2 class="quality">{{ cheap_block }}</h2>
+                <p>{{ text }}</p>
+            </div>
+            <div class="column">
+                <h2 class="quality">{{ qualitatively_block }}</h2>
+                <p>{{ text }}</p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

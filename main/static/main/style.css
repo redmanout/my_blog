@@ -4,6 +4,8 @@
     outline: none;
 }
 
+body {background-color: #b1b4ba}
+
 .container-fluid {
     background-color: #b1b4ba;
     min-height: 90vh;
@@ -16,7 +18,25 @@ header, footer {background-color: #222324;}
     font-size: 2.5rem!important;
 }
 
-.nav-link {font-size: 20px;}
+.nav-link {
+    font-size: 30px;
+    margin-right: 100px;
+}
+
+.nav-pills {
+    display: flex;
+    margin-right: 300px;
+}
+
+.name_reg {
+    padding: 20px;
+    font-size: 25px;
+}
+
+.btn_reg {
+    margin-top: 10px;
+    margin-right: 10px;
+}
 
 .button-1 {margin-top: 20px}
 

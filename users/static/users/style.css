@@ -1,4 +1,7 @@
-#reg_block {
+#reg_block,
+#logout_block,
+#login_block,
+#profile_block {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,12 +14,13 @@
 .mess_reg {
     display: block;
     text-align: center;
+    font-size: 20px;
+    margin: 0 auto;
 }
 
-.form_reg  {
+.form_reg {
     border: 1px solid silver;
-    padding: 30px;
-    margin-top: 15px;
+    padding: 20px;
 }
 
 .form_login input {
@@ -26,4 +30,30 @@
     border: 1px solid silver;
     border-radius: 5px;
     padding: 2%;
+}
+
+#profile_block {
+    display: flex;
+    text-align: center;
+}
+
+.block_prof {
+    width: 400px;
+    margin: 0 auto;
+    text-align: start;
+}
+
+.form_upd {
+    padding: 20px;
+    border: 1px solid silver;
+}
+
+#id_gender {
+    display: block;
+    width: 96%;
+    margin-top: 4px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 2%;
+    background-color: #fff;
 }

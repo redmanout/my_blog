@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
+from .models import Profile
 
 
 class UserRegForm(UserCreationForm):
@@ -29,3 +30,37 @@ class UserRegForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['username', 'password1', 'password2', 'email']
+
+
+class UserUpdateForm(forms.ModelForm):
+    CHOICES = (
+        ('male', 'Мужской пол'),
+        ('female', 'Женский пол')
+    )
+
+    email = forms.EmailField(
+        label='Введите Email',
+        required=True,
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Введите Email'})
+    )
+    username = forms.CharField(
+        label='Введите логин',
+        required=True,
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Введите логин'})
+    )
+
+    class Meta:
+        model = User
+        fields = ['username', 'email']
+
+
+class ProfileImageForm(forms.ModelForm):
+    img = forms.ImageField(
+        label='Загрузить фото',
+        required=False,
+        widget=forms.FileInput
+    )
+
+    class Meta:
+        model = Profile
+        fields = ['img', 'gender', 'mailing_agreement']

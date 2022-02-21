@@ -5,9 +5,24 @@
 {% endblock %}
 
 {% block content %}
-<div id="reg_block">
+<div id="profile_block">
     <h1>Кабинет пользователя</h1>
-    <p>{{ user.username }}</p>
-    <p>{{ user.email }}</p>
+    <div class="d-flex text-muted block_prof">
+      <img class="bd-placeholder-img flex-shrink-0 me-2 rounded" id="img_prof" width="64" height="64"
+           src="{{ user.profile.img.url }}">
+       <p class="pb-3 mb-0 small lh-sm border-bottom">
+           <strong class="d-block text-gray-dark">@{{ user.username }}</strong>
+           {% if user.email %}
+               <b>Email:  </b>{{ user.email }}
+           {% endif %}
+      </p>
+    </div>
+    <form method="post" enctype="multipart/form-data" class="block_prof form_upd mt-4">
+        {% csrf_token %}
+        {{ updateUseForm.as_p }}
+        {{ profileForm.as_p }}
+        <button class="btn btn-outline-info mt-2" type="submit">Обновить</button>
+    </form>
 </div>
+
 {% endblock %}

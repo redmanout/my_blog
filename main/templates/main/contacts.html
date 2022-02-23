@@ -1,0 +1,16 @@
+{% extends 'main/sample.html' %}
+
+{% block title %}
+    Страница с контактами
+{% endblock %}
+
+{% block content %}
+<div id="send_email_block">
+    <h1>Страница с контактами</h1>
+    <form method="post" enctype="multipart/form-data" class="block_prof form_upd mt-4">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-outline-info mt-2" type="submit">Обновить</button>
+    </form>
+</div>
+{% endblock %}

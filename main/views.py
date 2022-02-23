@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+
 def main(request):
     data = {
         'title': 'Mysite',
@@ -22,3 +23,11 @@ def services(request):
                 ' mattis fusce cursus ultricies nec metus in.'
     }
     return render(request, 'main/services.html', data)
+
+
+def contacts_send(request):
+    return render(request, 'main/contacts.html')
+
+
+def success_send(request):
+    pass

@@ -98,3 +98,14 @@ header, footer {
     align-content: center;
     width: 20%;
 }
+
+#send_email_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #f5f7fa;;
+    margin: 0 auto;
+}

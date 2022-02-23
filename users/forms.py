@@ -33,11 +33,6 @@ class UserRegForm(UserCreationForm):
 
 
 class UserUpdateForm(forms.ModelForm):
-    CHOICES = (
-        ('male', 'Мужской пол'),
-        ('female', 'Женский пол')
-    )
-
     email = forms.EmailField(
         label='Введите Email',
         required=True,

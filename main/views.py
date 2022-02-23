@@ -1,4 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.core.mail import send_mail, BadHeaderError
+from .forms import MessageForm
+from django.contrib import messages
+from django.http import HttpResponse, HttpResponseRedirect
 
 
 def main(request):
@@ -26,8 +30,26 @@ def services(request):
 
 
 def contacts_send(request):
-    return render(request, 'main/contacts.html')
+    subject = 'topic_letter'
+    plain_message = 'text_message'
+    from_email = 'email'
+    to = 'vladimirkotov1115@gmail.com'
+    if request.method == 'GET':
+        form = MessageForm()
+    elif request.method == 'POST':
+        form = MessageForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, f'Сообщение успешно отправлено')
+            try:
+                send_mail(subject, from_email, plain_message, [to])
+            except BadHeaderError:
+                return HttpResponse('Ошибка')
+            return redirect('success')
+    else:
+        return HttpResponse('Неверный запрос')
+    return render(request, 'main/contacts.html', {'form': form})
 
 
 def success_send(request):
-    pass
+    return HttpResponse('Успешно')

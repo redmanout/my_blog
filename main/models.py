@@ -4,7 +4,7 @@ from django.db import models
 class Message(models.Model):
     sender_login = models.CharField(
         max_length=50,
-        verbose_name='Логин отправителя'
+        verbose_name='Логин отправителя*'
     )
     email = models.EmailField(
         max_length=100,
@@ -20,7 +20,7 @@ class Message(models.Model):
     )
 
     def __str__(self):
-        return f'Пользователь с логином {self.sender_login} отправил письмо на email:{self.email}'
+        return f'Пользователь с логином {self.sender_login} отправил письмо, его email:{self.email}'
 
     class Meta:
         verbose_name = 'Сообщение'

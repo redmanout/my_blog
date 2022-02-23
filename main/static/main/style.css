@@ -10,7 +10,7 @@ body {
 
 .container-fluid {
     background-color: #b1b4ba;
-    min-height: 90vh;
+    min-height: 100vh;
 }
 
 header, footer {
@@ -99,13 +99,52 @@ header, footer {
     width: 20%;
 }
 
-#send_email_block {
+/*#id_text_message {*/
+/*    resize: none;*/
+/*}*/
+
+/*.form_email {*/
+/*    width: 400px;*/
+/*}*/
+
+/*#send_email_block {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    width: 100%;*/
+/*    height: 100vh;*/
+/*    background-color: #f5f7fa*/
+/*}*/
+
+/*.form_email input, textarea {
+    display: block;
+    width: 96%;
+    margin-top: 4px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 2%
+}
+
+/*.form_email {height: 40vh}*/
+
+.block_email {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    background-color: #f5f7fa;
+    min-height: 100vh;
     width: 100%;
-    height: 100vh;
-    background-color: #f5f7fa;;
     margin: 0 auto;
 }
+
+.block_email input, textarea {
+    display: block;
+    width: 50%;
+    margin-top: 4px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 1%;
+}
+
+.block_email textarea {resize: none}
